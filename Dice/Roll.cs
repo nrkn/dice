@@ -71,6 +71,12 @@ namespace Dice
 
 	public struct RollKeep
 	{
+		public RollKeep( RollKeepType type = RollKeepType.All, int amount = 0 )
+		{
+			Type = type;
+			Amount = amount;
+		}
+
 		public RollKeepType Type;
 		public int Amount;
 
@@ -79,6 +85,14 @@ namespace Dice
 
 	public struct RollModifier
 	{
+		public RollModifier( 
+			RollModifierType type = RollModifierType.Add, int amount = 0 
+		)
+		{
+			Type = type;
+			Amount = amount;
+		}
+
 		public RollModifierType Type;
 		public int Amount;
 

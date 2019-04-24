@@ -14,7 +14,7 @@ namespace Dice
 
 		public Die Die(int sides = 6) => new Die(sides, random);
 
-		public int Roll(int number, int sides) =>
+		public int Roll(int number = 1, int sides = 1 ) =>
 			Die(sides).Rolls(number).Sum();
 
 		public int Roll(Roll roll)

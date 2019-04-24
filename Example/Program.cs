@@ -43,6 +43,23 @@ namespace Example
 			RollSeeded("3 d6 l2 *2 -1", seed);
 			RollSeeded("10d10*10+10", seed);
 
+			Console.WriteLine("Construct Roll from code");
+
+			var modifiers = new RollModifier[]
+			{
+				new RollModifier( RollModifierType.Multiply, 2 ),
+				new RollModifier( RollModifierType.Add, 1 ),
+			};
+
+			var keep = new RollKeep( RollKeepType.Highest, 2 );
+
+			var roll = new Roll(number, sides, keep, modifiers);
+			var result = new DiceFactory().Roll(roll);
+
+			Console.WriteLine(
+				$"  Rolled { roll.ToString() } = { result }"
+			);
+
 			Console.ReadKey();
 		}
 
