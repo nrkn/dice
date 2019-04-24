@@ -37,7 +37,7 @@ Func<int, bool> predicate = n => n == 3;
 int successesWhen3 = d6.Successes( 10, predicate );
 ```
 
-## DieFactory Class
+## DiceFactory Class
 
 ### ctor
 ```cs
